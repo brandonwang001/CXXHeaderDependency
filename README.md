@@ -7,7 +7,9 @@
 - 然后根据依赖，快速提取依赖的文件进行复用。
 
 # 例如
-如下面的结果所示，我们可以观察到core/core.h依赖了头文件util/mutex.h和util/thread.h，
+以example作为工程，在example执行main
+.go后会如下面的结果所示，同时在/tmp/analyze下生成对应文件的依赖。
+我们可以观察到core/core.h依赖了头文件util/mutex.h和util/thread.h，
 而util/thread.h依赖了util/queue.h和util/blocking_queue.h。
 假定我们需要复用core/core.cc，我们可以快速找到core/core.cc的依赖头文件。我们可以抽取
 - util/mutex.h
